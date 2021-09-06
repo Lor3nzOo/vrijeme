@@ -16,8 +16,18 @@ body {
 
 section {
   background-color: #d2d2d2;
-  margin: 5rem 0 1rem 0;
+  margin: 5rem 1rem 5rem 1rem;
   padding-bottom: 1vw;
+}
+
+.section2 {
+  background-color: #d2d2d2;
+  margin-top: 35rem;
+}
+
+.section3 {
+  background-color: #d2d2d2;
+  margin-top: 9rem;
 }
 
 .controls {
@@ -34,7 +44,7 @@ input {
   background-color: #d2d2d2;
 }
 
-input:focus{
+input:focus {
   outline: none;
 }
 
@@ -46,7 +56,7 @@ input::-webkit-inner-spin-button {
 }
 
 /* Firefox */
-input[type=number] {
+input[type="number"] {
   -moz-appearance: textfield;
 }
 
@@ -72,8 +82,8 @@ main {
 }
 
 h1 {
+  padding: 0.5em 0.5em;
   text-align: center;
-  margin-bottom: 2rem;
 }
 
 .nutrients ul {
@@ -109,7 +119,7 @@ ul {
   margin-bottom: 1rem;
 }
 
-select{
+select {
   outline: 0;
   -webkit-appearance: button;
   border: none;
@@ -122,7 +132,7 @@ select{
   vertical-align: middle;
   width: 300px;
   background-color: #fff;
-  color: #202124!important;
+  color: #202124 !important;
   height: 36px;
   padding-left: 8px;
   background-image: none;
@@ -155,11 +165,11 @@ a:hover {
   }
 }
 
-.lista{
+.lista {
   padding: 1vw 0 0 0;
   text-align: center;
 }
 
-.lista2{
+.lista2 {
   text-align: center;
 }

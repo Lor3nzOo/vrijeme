@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/vrijeme/static/css/main.9f0b432c.chunk.css",
-    "main.js": "/vrijeme/static/js/main.0d6cc0bc.chunk.js",
-    "main.js.map": "/vrijeme/static/js/main.0d6cc0bc.chunk.js.map",
+    "main.css": "/vrijeme/static/css/main.c9984b30.chunk.css",
+    "main.js": "/vrijeme/static/js/main.f9cd5e3e.chunk.js",
+    "main.js.map": "/vrijeme/static/js/main.f9cd5e3e.chunk.js.map",
     "runtime-main.js": "/vrijeme/static/js/runtime-main.2b0f386f.js",
     "runtime-main.js.map": "/vrijeme/static/js/runtime-main.2b0f386f.js.map",
     "static/css/2.818011ed.chunk.css": "/vrijeme/static/css/2.818011ed.chunk.css",
@@ -12,14 +12,14 @@
     "static/js/3.ba4f1e1d.chunk.js.map": "/vrijeme/static/js/3.ba4f1e1d.chunk.js.map",
     "index.html": "/vrijeme/index.html",
     "static/css/2.818011ed.chunk.css.map": "/vrijeme/static/css/2.818011ed.chunk.css.map",
-    "static/css/main.9f0b432c.chunk.css.map": "/vrijeme/static/css/main.9f0b432c.chunk.css.map",
+    "static/css/main.c9984b30.chunk.css.map": "/vrijeme/static/css/main.c9984b30.chunk.css.map",
     "static/js/2.9b049a37.chunk.js.LICENSE.txt": "/vrijeme/static/js/2.9b049a37.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.2b0f386f.js",
     "static/css/2.818011ed.chunk.css",
     "static/js/2.9b049a37.chunk.js",
-    "static/css/main.9f0b432c.chunk.css",
-    "static/js/main.0d6cc0bc.chunk.js"
+    "static/css/main.c9984b30.chunk.css",
+    "static/js/main.f9cd5e3e.chunk.js"
   ]
 }

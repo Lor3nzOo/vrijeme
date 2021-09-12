@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Vrijeme",
+  "name": "Aplikacija za Vrijeme",
   "icons": [
     {
       "src": "favicon.ico",

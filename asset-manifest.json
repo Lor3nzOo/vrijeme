@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/vrijeme/static/css/main.c9984b30.chunk.css",
-    "main.js": "/vrijeme/static/js/main.8f65f345.chunk.js",
-    "main.js.map": "/vrijeme/static/js/main.8f65f345.chunk.js.map",
+    "main.js": "/vrijeme/static/js/main.a28bccf5.chunk.js",
+    "main.js.map": "/vrijeme/static/js/main.a28bccf5.chunk.js.map",
     "runtime-main.js": "/vrijeme/static/js/runtime-main.2b0f386f.js",
     "runtime-main.js.map": "/vrijeme/static/js/runtime-main.2b0f386f.js.map",
     "static/css/2.818011ed.chunk.css": "/vrijeme/static/css/2.818011ed.chunk.css",
@@ -20,6 +20,6 @@
     "static/css/2.818011ed.chunk.css",
     "static/js/2.9b049a37.chunk.js",
     "static/css/main.c9984b30.chunk.css",
-    "static/js/main.8f65f345.chunk.js"
+    "static/js/main.a28bccf5.chunk.js"
   ]
 }

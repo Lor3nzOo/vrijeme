@@ -46,32 +46,32 @@ function App() {
           <button className="cta" onClick={getWeatherData} >Klikni za vrijeme</button>
         </section>
         <ul>
-            <li className="lista">
+            <li>
               Vrijeme:{" "}
               {weatherData.weather.map(
                 ({ description }) =>
                   description.charAt(0).toUpperCase() + description.slice(1)
               )}
             </li>
-            <li className="lista2">
-              <img alt="picture" src={src} />
+            <li>
+              <img alt="Slika Vremena" src={src} />
             </li>
-            <li className="lista2">
+            <li>
               Temperatura: {weatherData.main.temp}&deg;C
             </li>
-            <li className="lista">
+            <li>
               Osjet: {weatherData.main.feels_like}&deg;C
             </li>
-            <li className="lista">
+            <li>
               Minimalna temperatura: {weatherData.main.temp_min}&deg;C
             </li>
-            <li className="lista">
+            <li>
               Maksimalna temperatura: {weatherData.main.temp_max}&deg;C
             </li>
-            <li className="lista">Vlažnost: {weatherData.main.humidity}%</li>
-            <li className="lista">Tlak: {weatherData.main.pressure}hPa</li>
-            <li className="lista">Oblaci: {weatherData.clouds.all}%</li>
-            <li className="lista">
+            <li>Vlažnost: {weatherData.main.humidity}%</li>
+            <li>Tlak: {weatherData.main.pressure}hPa</li>
+            <li>Oblaci: {weatherData.clouds.all}%</li>
+            <li>
               Brzina vjetra:{" "}
               {weatherData.wind.speed.toFixed(1) * (3.6).toFixed(0)}
               km/h

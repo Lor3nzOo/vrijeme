@@ -1,55 +1,51 @@
-import React, { useState } from "react";
+import React, { useState} from "react";
+import axios from "axios";
+import { Alert } from "react-bootstrap";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
+  const [show, setShow] = useState(true);
   const [weatherData, setWeatherData] = useState(null);
   const [city, setCity] = useState(null);
-  const [state, setState] = useState(null);
-  const [zip, setZip] = useState(null);
+  const [error, setError] = useState(null);
 
   function handleCity(e) {
     setCity(e.target.value.toLowerCase());
-  }
-
-  function handleState(e) {
-    setState(e.target.value.toLowerCase());
-  }
-
-  function handleZip(e) {
-    setZip(e.target.value.toLowerCase());
   }
 
   function getWeatherData() {
     const navL = navigator.language;
     const nav = navL.split("-");
 
-    fetch(
-      `https://api.openweathermap.org/data/2.5/weather?q=${city},${state},${zip}&appid=909b25942a91dd2c10a0a46a8e77451a&lang=${nav[0]}&units=metric`
-    )
-      .then(response => response.json())
-      .then(data => {
-        setWeatherData(data);
-      })
-      .catch(error => {
-        console.log(error);
-      });
+    axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=909b25942a91dd2c10a0a46a8e77451a&lang=${nav[0]}&units=metric`).then(response => {
+      setError(null)
+      setWeatherData(response.data);
+    }).catch((error) => {
+      setWeatherData(null);
+      setShow(true);
+      if (error.toString().includes(404)) {
+        setError("Grad ili Naselje nije pronađeno...")
+      } else {
+        setError(error.toString())
+      }
+    });
   }
 
   if (weatherData !== null) {
     const icon = weatherData.weather.map(({ icon }) => icon);
-    const src = "http://openweathermap.org/img/wn/" + icon + "@2x.png";
+    const src = `http://openweathermap.org/img/wn/${icon}@2x.png`;
 
     return (
       <div className="App">
-        <section className="controls">
-          <input type="text" placeholder="Grad" onChange={handleCity} />
-          <input type="text" placeholder="Država" onChange={handleState} />
-          <input
-            type="text"
-            placeholder="Poštanski broj"
-            onChange={handleZip}
-          />
-          <button onClick={getWeatherData}>Klikni za vrijeme</button>
-          <ul>
+      {error && show && 
+          <Alert className="mt-4" variant="danger" onClose={() => setShow(false)} dismissible>
+          <Alert.Heading>{error}</Alert.Heading>
+        </Alert>}
+        <section className="kontrole">
+          <input type="text" placeholder="Grad ili Naselje" onChange={handleCity} />
+          <button className="cta" onClick={getWeatherData} >Klikni za vrijeme</button>
+        </section>
+        <ul>
             <li className="lista">
               Vrijeme:{" "}
               {weatherData.weather.map(
@@ -81,30 +77,25 @@ function App() {
               km/h
             </li>
           </ul>
-        </section>
-        <div className="section3">
+        <div className="kopirajt">
           <h1>&copy; Lorenzo Melon 2021</h1>
         </div>
       </div>
-    );
+   );
   } else {
     return (
       <div className="App">
-        <section className="controls">
-          <input type="text" placeholder="Grad" onChange={handleCity} />
-          <input type="text" placeholder="Država" onChange={handleState} />
-          <input
-            type="text"
-            placeholder="Poštanski broj"
-            onChange={handleZip}
-          />
-          <button onClick={getWeatherData}>Klikni za vrijeme</button>
+        {error && show && <Alert className="mt-4" variant="danger" onClose={() => setShow(false)} dismissible>
+        <Alert.Heading>{error}</Alert.Heading>
+      </Alert>}
+        <section className="kontrole">
+          <input type="text" placeholder="Grad ili Naselje" onChange={handleCity} />
+          <button className="cta" onClick={getWeatherData}>Klikni za vrijeme</button>
         </section>
-        <div className="section2">
+        <div className="kopirajt">
           <h1>&copy; Lorenzo Melon 2021</h1>
         </div>
-      </div>
-    );
+      </div>);
   }
 }
 

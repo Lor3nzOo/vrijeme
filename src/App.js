@@ -1,7 +1,6 @@
 import React, { useState} from "react";
 import axios from "axios";
 import { Alert } from "react-bootstrap";
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   const [show, setShow] = useState(true);
@@ -10,7 +9,9 @@ function App() {
   const [error, setError] = useState(null);
 
   function handleCity(e) {
-    setCity(e.target.value.toLowerCase());
+    if (e.target.value.toLowerCase() !== null || "" || undefined){
+      setCity(e.target.value.toLowerCase())
+    }
   }
 
   function getWeatherData() {
@@ -32,7 +33,7 @@ function App() {
   }
 
   if (weatherData !== null) {
-    const icon = weatherData.weather.map(({ icon }) => icon);
+    const icon = weatherData.weather.map(({icon}) => icon);
     const src = `http://openweathermap.org/img/wn/${icon}@2x.png`;
 
     return (
@@ -41,16 +42,14 @@ function App() {
           <Alert className="mt-4" variant="danger" onClose={() => setShow(false)} dismissible>
           <Alert.Heading>{error}</Alert.Heading>
         </Alert>}
-        <section className="kontrole">
           <input type="text" placeholder="Grad ili Naselje" onChange={handleCity} />
           <button className="cta" onClick={getWeatherData} >Klikni za vrijeme</button>
-        </section>
         <ul>
             <li>
-              Vrijeme:{" "}
+              Vrijeme:
               {weatherData.weather.map(
                 ({ description }) =>
-                  description.charAt(0).toUpperCase() + description.slice(1)
+                  ` ${description.charAt(0).toUpperCase() + description.slice(1)}`
               )}
             </li>
             <li>
@@ -88,10 +87,8 @@ function App() {
         {error && show && <Alert className="mt-4" variant="danger" onClose={() => setShow(false)} dismissible>
         <Alert.Heading>{error}</Alert.Heading>
       </Alert>}
-        <section className="kontrole">
           <input type="text" placeholder="Grad ili Naselje" onChange={handleCity} />
           <button className="cta" onClick={getWeatherData}>Klikni za vrijeme</button>
-        </section>
         <div className="kopirajt">
           <h1>&copy; Lorenzo Melon 2021</h1>
         </div>

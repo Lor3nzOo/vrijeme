@@ -4,7 +4,7 @@
 }
 
 body {
-  overflow: hidden;
+  font-family: 'Poppins';
   background-color: #f3f3f3;
 }
 
@@ -14,31 +14,35 @@ body {
   flex-direction: column;
 }
 
-section {
-  background-color: #d2d2d2;
-  margin: 1% 0;
-}
-
 .kopirajt {
   margin-top: 1%;
-  width: 17%;
+  width: 15.5%;
   background-color: #d2d2d2;
-}
-
-.kontrole {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
 }
 
 input {
+  margin-top: 1%;
   border: none;
   text-align: center;
-  padding: 1%;
-  width: 190%;
+  padding: 0.5% 2%;
+  width: 11.5%;
   background-color: #d2d2d2;
   transition: 0.22s;
 }
+
+.btn-close {
+  margin-bottom: 4%;
+  width: 10%;
+  height: 10%;
+  padding: 3%;
+  background-image: url("zatvori.svg");
+  background-repeat: no-repeat;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: 0.22s;
+}
+
 
 input:focus {
   background-color: #c9c9c9;
@@ -46,12 +50,12 @@ input:focus {
 }
 
 .cta {
-  width: 190%;
-  padding: 4% 20%;
+  cursor: pointer;
+  width: 15.5%;
+  padding: 1% 2%;
   background-color: #3472b7;
   color: #f3f3f3;
   border: none;
-  font-size: 110%;
   transition: 0.22s;
 }
 
@@ -60,8 +64,8 @@ input:focus {
 }
 
 h1 {
-  font-size: 150%  !important;
-  padding: 2%;
+  font-size: 120% ;
+  padding: 2% 1%;
   text-align: center;
 }
 
@@ -71,10 +75,10 @@ img {
 }
 
 ul {
-  margin: 2% 0 !important;
-  width: 17%;
+  margin: 2% 0;
+  width: 15.5%;
   background: #d2d2d2;
-  padding: 0 !important;
+  padding: 0 ;
   list-style: none;
 }
 
@@ -84,12 +88,14 @@ ul li{
 }
 
 .alert-danger {
-  width: 17%;
-  color: #202124 !important;
-  background-color: #d2d2d2 !important;
-  border-color: #d2d2d2 !important;
+  padding: 1%;
+  margin-top: 1%;
+  width: 13.5%;
+  color: #202124;
+  background-color: #d2d2d2;
+  border-color: #d2d2d2;
 }
 
 .h4{
-  font-size: 120%  !important;
+  font-size: 120%;
 }
